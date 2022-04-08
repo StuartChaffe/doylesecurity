@@ -1,0 +1,31 @@
+.cookie-alert {
+	display: none;
+	background: orange;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	&.is-visible {
+		display: block;
+	}
+}
+
+.cookie-alert__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-s) var(--spacing-l);
+}
+
+.cookie-alert__inner p {
+	margin: 0;
+	line-height: 1;
+	font-size: var(--font-size-small);
+}
+
+.cookie-alert__btn {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}

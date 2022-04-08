@@ -1,0 +1,44 @@
+.site-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-header__inner {
+	@extend .container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.site-header__logo {
+	font-size: 2rem;
+	margin: 0;
+}
+
+.site-header__nav {
+	display: none;
+
+	@include mq(medium) {
+		display: block;
+	}
+}
+
+.site-header__nav ul {
+	display: flex;
+}
+
+.site-header__nav li {
+	margin-left: 1rem;
+}
+
+.site-header__menu-btn {
+	background: black;
+	color: white;
+	border: 0;
+
+	@include mq(medium) {
+		display: none;
+	}
+}

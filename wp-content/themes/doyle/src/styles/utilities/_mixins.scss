@@ -1,0 +1,46 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// Responsive type
+// Example usage:
+// font-size: font-scale(display, 6);
+@function fluid-type($size) {
+    @return calc(#{$size} + #{$body-size-multiplier});
+}
+
+
+
+// Visually hides elements without hiding them from screen readers
+// Example usage:
+// @include visually-hidden();
+@mixin visually-hidden() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+
+
+// Reset margin, padding and list-style on a list
+// Example usage:
+// @include reset-list();
+ @mixin reset-list() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// Z-index helper based on settings in variables.scss
+// Example usage:
+// z-index: z-scale(foreground);
+@function z-scale($key) {
+	@return map-get($z-scale, $key);
+}

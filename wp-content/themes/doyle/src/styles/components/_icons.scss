@@ -1,0 +1,39 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    width: 20px;
+	height: 20px;
+}
+
+.icon--small {
+    width: 13px;
+    height: 13px;
+}
+
+.icon--medium {
+    width: 26px;
+    height: 26px;
+}
+
+.icon--large {
+    width: 32px;
+    height: 32px;
+}
+
+.icon--xlarge {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--scale {
+    width: 0.75em;
+    height: 0.75em;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.icon--offset {
+    margin-right: 5px;
+}

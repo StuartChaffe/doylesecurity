@@ -1,0 +1,19 @@
+.site-footer {
+	margin-top: auto;
+	text-align: center;
+	background-color: var(--color-primary);
+	padding: var(--spacing);
+}
+
+.site-footer__inner {
+	@extend .container;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.site-footer p {
+	color: white;
+	margin: 0;
+	font-size: var(--font-size-small);
+}

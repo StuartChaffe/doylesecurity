@@ -1,0 +1,24 @@
+// =============================================================================
+// Site
+// =============================================================================
+
+.global-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+	max-width: var(--container-width);
+}
+
+.main {
+	@extend .container;
+	max-width: var(--content-width);
+	margin-top: var(--spacing-l);
+	margin-bottom: var(--spacing-l);
+	flex: 1;
+}

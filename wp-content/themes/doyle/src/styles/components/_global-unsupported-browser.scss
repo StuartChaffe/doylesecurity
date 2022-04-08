@@ -1,0 +1,18 @@
+.unsupported-browser {
+	display: none;
+	background: var(--color-grey);
+	text-align: center;
+}
+
+.unsupported-browser__inner {
+	padding: var(--spacing);
+}
+
+.unsupported-browser h2 {
+	font-size: var(--font-size-h4);
+	margin: 0;
+}
+
+.unsupported-browser p {
+	margin: 0;
+}

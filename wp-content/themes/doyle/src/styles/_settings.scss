@@ -1,0 +1,35 @@
+$debug:	false;
+
+// Block colours
+$block-colors:
+	( "white", #fff ),
+    ( "black", #000 ),
+    ( "primary", #{var(--color-primary)} ),
+	( "secondary", #{var(--color-secondary)} ),
+	( "tertiary", #{var(--color-tertiary)} ),
+	( "quaternary", #{var(--color-quaternary)} );
+
+$breakpoints: (
+	small: 30em,
+	small-major: 40em,
+	medium: 50em,
+	medium-major: 60em,
+	large: 70em,
+	xlarge: 80em,
+	xxlarge: 90em,
+	xxxlarge: 100em
+);
+
+$show-breakpoints: (small, small-major, medium, medium-major, large, xlarge, xxlarge, xxxlarge);
+
+@use 'utilities/mq' with (
+  $breakpoints: $breakpoints,
+  $show-breakpoints: $show-breakpoints
+);
+
+$z-scale: (
+	foreground: 1,
+	overlay: 10,
+	navigation: 100,
+	modal: 200
+);

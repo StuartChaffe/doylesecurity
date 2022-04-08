@@ -1,0 +1,10 @@
+.global-alert {
+    background: var(--color-primary);
+    text-align: center;
+    padding: 1rem;
+}
+
+.global-alert p {
+    color: white;
+    margin: 0;
+}

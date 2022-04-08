@@ -1,0 +1,11 @@
+# Make sure these files are hidden
+.sass-cache/*
+.DS_Store
+.env
+node_modules
+*.log
+*.sql
+*.sqlite
+*.bak
+Thumbs.db
+.nova

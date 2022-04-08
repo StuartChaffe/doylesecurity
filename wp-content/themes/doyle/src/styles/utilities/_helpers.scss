@@ -1,0 +1,53 @@
+// =============================================================================
+// Helper classes
+// =============================================================================
+
+.u-bold { font-weight: bold!important; }
+.u-semibold { font-weight: 600!important; }
+.u-regular { font-weight: normal!important; }
+.u-light { font-weight: 300!important; }
+.u-italic { font-style: italic!important; }
+.u-caps { text-transform: uppercase!important; }
+.u-left-align { text-align: left!important; }
+.u-center { text-align: center!important; }
+.u-right-align { text-align: right!important; }
+
+// Margins
+.mt-xxl { margin-top: var(--spacing-xxl)!important; }
+.mt-xl { margin-top: var(--spacing-xl)!important; }
+.mt-l { margin-top: var(--spacing-l)!important; }
+.mt { margin-top: var(--spacing)!important; }
+.mt-s { margin-top: var(--spacing-s)!important; }
+
+.mb-xxl { margin-bottom: var(--spacing-xxl)!important; }
+.mb-xl { margin-bottom: var(--spacing-xl)!important; }
+.mb-l { margin-bottom: var(--spacing-l)!important; }
+.mb { margin-bottom: var(--spacing)!important; }
+.mb-s { margin-bottom: var(--spacing-s)!important; }
+
+// WordPress specifc
+img.alignright      { float: right; margin: 0 0 1em 1em; }
+img.alignleft       { float: left; margin: 0 1em 1em 0; }
+img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
+.alignright         { float: right; }
+.alignleft          { float: left; }
+.aligncenter        { display: block; margin-left: auto; margin-right: auto; }
+
+// Screen reader
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+// debugging
+@if $debug == true {
+    * {
+        box-shadow: inset 0 0 0 1px red;
+    }
+}

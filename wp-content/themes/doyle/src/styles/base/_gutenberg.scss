@@ -1,0 +1,63 @@
+/* Generate block colours */
+@each $name, $color in $block-colors {
+	.has-#{$name}-color {
+		color: $color!important;
+	}
+
+	.has-#{$name}-background-color {
+		background-color: $color!important;
+	}
+}
+
+/* Stop links being clickable in the block editor */
+.acf-block-preview a {
+	pointer-events: none!important;
+}
+
+/* Add bullets to list */
+.block-editor-block-list__block {
+	list-style: disc;
+}
+
+/* Post title width */
+.editor-post-title__block.wp-block {
+	max-width: var(--content-width);
+
+	/* Post title styling */
+	.editor-post-title__input {
+	}
+}
+
+/* Main column width */
+.wp-block {
+    max-width: var(--content-width);
+
+	/* Wide column width */
+	&[data-align="wide"],
+	&[data-align="full"] {
+		max-width: none;
+	}
+}
+
+// Undo blockquote styles
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	border-left: 0;
+	padding-left: 0;
+}
+
+// Fix space between image and caption
+.wp-block-image {
+	line-height: 0;
+}
+
+// Full width button
+.wp-block-button.is-style-full,
+.wp-block-button.is-style-full .block-editor-rich-text,
+div[data-type="core/button"] div[data-block] {
+	display: block;
+}
+
+// Separator
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 100%;
+}
