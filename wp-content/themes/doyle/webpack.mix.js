@@ -17,10 +17,10 @@ mix
         proxy: process.env.MIX_PROXY,
         host: process.env.MIX_HOST,
         open: 'external',
-        https: {
-            key: process.env.MIX_HTTPS_KEY,
-            cert: process.env.MIX_HTTPS_CERT
-        },
+        // https: {
+        //     key: process.env.MIX_HTTPS_KEY,
+        //     cert: process.env.MIX_HTTPS_CERT
+        // },
         files: [
           'assets/css/styles.css',
           'assets/js/scripts.js',
