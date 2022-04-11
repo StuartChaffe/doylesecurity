@@ -7,6 +7,10 @@
 <link rel="icon" href="/favicon.ico"><!-- 32×32 -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
 <?php get_template_part('partials/global', 'analytics'); ?>
 </head>
