@@ -59,3 +59,21 @@ function origin_deregister_styles() {
 	}
 }
 // add_action( 'wp_enqueue_scripts', 'origin_deregister_styles', 100);
+function doyle_acf_block_render_callback( $block ) {
+	$slug = str_replace('acf/', '', $block['name']);
+
+	if( file_exists( get_theme_file_path("/blocks/{$slug}.php") ) ) {
+		include( get_theme_file_path("/blocks/{$slug}.php") );
+	}
+}
+
+add_filter( 'allowed_block_types_all', 'doyle_allowed_block_types' );
+ 
+function doyle_allowed_block_types( $allowed_blocks ) {
+ 
+	return array(
+		'acf/custom-block-doyle-1',
+		'acf/custom-block-doyle-2',
+	);
+ 
+}

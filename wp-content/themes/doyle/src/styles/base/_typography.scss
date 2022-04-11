@@ -46,7 +46,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
 	margin: 0;
 	line-height: var(--line-height-headings);
 	font-weight: var(--font-weight-bold);
@@ -58,6 +59,7 @@ h2, .heading-2 { font-size: var(--font-size-h2); }
 h3, .heading-3 { font-size: var(--font-size-h3); }
 h4, .heading-4 { font-size: var(--font-size-h4); }
 h5, .heading-5 { font-size: var(--font-size-h5); }
+h6, .heading-6 { font-size: var(--font-size-h6); }
 
 code {
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

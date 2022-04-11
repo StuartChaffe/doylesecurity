@@ -1,7 +1,7 @@
 <?php
 /*
 Active: true
-UUID: 202202200831
+UUID: 1
 Title: Accordion
 Description: A simple accordion
 Keywords: faq
