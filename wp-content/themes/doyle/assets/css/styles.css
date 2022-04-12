@@ -148,7 +148,7 @@ body:before {
   --container-global: 1800px;
   --font-size: 1.05rem;
   --font-size-lead: calc(1.2rem + 0.1vw);
-  --font-size-small: calc(0.9rem + 0.1vw);
+  --font-size-small: calc(0.8rem + 0.1vw);
   --font-size-h1: 2.4rem;
   --font-size-h2: 1.9rem;
   --font-size-h3: 1.6rem;
@@ -807,11 +807,22 @@ div[data-type="core/button"] div[data-block] {
 .site-header__up {
   background-color: black;
 }
+.site-header__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.site-header__content p {
+  text-transform: uppercase;
+  font-size: var(--font-size-small);
+  color: white;
+}
 
 .site-header__inner {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

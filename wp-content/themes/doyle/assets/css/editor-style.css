@@ -148,7 +148,7 @@ body:before {
   --container-global: 1800px;
   --font-size: 1.05rem;
   --font-size-lead: calc(1.2rem + 0.1vw);
-  --font-size-small: calc(0.9rem + 0.1vw);
+  --font-size-small: calc(0.8rem + 0.1vw);
   --font-size-h1: 2.4rem;
   --font-size-h2: 1.9rem;
   --font-size-h3: 1.6rem;
