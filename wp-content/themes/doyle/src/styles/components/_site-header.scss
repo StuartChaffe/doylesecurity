@@ -1,9 +1,11 @@
 .site-header {
 	display: flex;
 	justify-content: space-between;
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top: 0;
 	transition: all 0.2s ease-in-out;
+	z-index: 99;
 
 	&__up {
 		background-color: rgba(0,0,0,1);
@@ -41,6 +43,7 @@
 
 .site-header__nav li {
 	margin-left: 1rem;
+	line-height: 100%;
 	a {
 		color: white;
 	}

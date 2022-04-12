@@ -12,7 +12,7 @@
 	margin: 0 auto;
 	padding: 0 1em;
 	width: 100%;
-	max-width: var(--container-width);
+	max-width: var(--container);
 }
 
 .main {
@@ -21,4 +21,12 @@
 	margin-top: var(--spacing-l);
 	margin-bottom: var(--spacing-l);
 	flex: 1;
+}
+
+.text {
+	&--white {
+		h1, h2, h3, h4, h5, h6, p, ul li, a {
+			color: white;
+		}	
+	}
 }

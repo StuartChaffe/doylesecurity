@@ -1,10 +1,14 @@
 p {
-	margin-top: var(--spacing-l);
-	margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: var(--spacing-xs);
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 p.lead {
 	font-size: var(--font-size-lead);
+	font-weight: var(--font-weight-light);
 }
 
 ul,
@@ -49,6 +53,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
+	margin-bottom: var(--spacing);
 	line-height: var(--line-height-headings);
 	font-weight: var(--font-weight-bold);
 	color: var(--heading-color);

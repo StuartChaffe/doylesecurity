@@ -110,7 +110,7 @@ body:before {
 :root {
   --body-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --display-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-weight-light: 100;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 500;
   --font-weight-heavy: 700;
@@ -136,15 +136,16 @@ body:before {
   --color-linkedin: #0077B5;
   --body-background-color: #fff;
   --border-radius: 16px;
-  --spacing-xxl: 3em;
-  --spacing-xl: 2em;
-  --spacing-l: 1.5em;
-  --spacing: 1em;
-  --spacing-s: 0.5em;
-  --spacing-xs: 0.25em;
-  --container-width: 75rem;
-  --container-width-l: 100rem;
-  --content-width: 50rem;
+  --spacing-xxl: 200px;
+  --spacing-xl: 150px;
+  --spacing-l: 100px;
+  --spacing: 50px;
+  --spacing-s: 25px;
+  --spacing-xs: 10px;
+  --container: 1200px;
+  --container-l: 1430px;
+  --content-width: var(--container);
+  --container-global: 1800px;
   --font-size: 1.05rem;
   --font-size-lead: calc(1.2rem + 0.1vw);
   --font-size-small: calc(0.9rem + 0.1vw);
@@ -263,12 +264,16 @@ select {
 }
 
 p {
-  margin-top: var(--spacing-l);
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+p:last-of-type {
   margin-bottom: 0;
 }
 
 p.lead {
   font-size: var(--font-size-lead);
+  font-weight: var(--font-weight-light);
 }
 
 ul,
@@ -313,6 +318,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  margin-bottom: var(--spacing);
   line-height: var(--line-height-headings);
   font-weight: var(--font-weight-bold);
   color: var(--heading-color);
@@ -458,11 +464,11 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .main {
+.container, .banner__content, .main {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
-  max-width: var(--container-width);
+  max-width: var(--container);
 }
 
 .main {
@@ -472,17 +478,14 @@ div[data-type="core/button"] div[data-block] {
   flex: 1;
 }
 
+.text--white h1, .text--white h2, .text--white h3, .text--white h4, .text--white h5, .text--white h6, .text--white p, .text--white ul li, .text--white a {
+  color: white;
+}
+
 .content > * {
   max-width: var(--content-width);
   margin-right: auto;
   margin-left: auto;
-}
-.content h2,
-.content h3,
-.content h4,
-.content h5 {
-  margin-top: var(--spacing-l);
-  margin-bottom: 0;
 }
 .content a {
   color: var(--link-color);
@@ -678,10 +681,53 @@ div[data-type="core/button"] div[data-block] {
 }
 
 .banner {
-  max-width: var(--content-width);
-  margin-top: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
-  padding: 0;
+  min-height: 85vh;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  padding-top: 12%;
+}
+@media (max-width: 49.99em) {
+  .banner {
+    background-image: none !important;
+  }
+}
+.banner__content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.banner__text {
+  margin-top: auto;
+  border-top: 2px solid var(--color-primary);
+  padding: var(--spacing) 30% var(--spacing) 0;
+}
+.banner__image {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  min-width: calc(100% + 2px);
+  min-height: calc(100% + 2px);
+  display: block;
+}
+@media (min-width: 50em) {
+  .banner__image {
+    display: none;
+  }
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: var(--color-primary);
+  background: linear-gradient(90deg, rgba(219, 37, 28, 0) 0%, #db251c 100%);
+  opacity: 0.5;
 }
 
 .u-bold {
@@ -799,4 +845,20 @@ img.aligncenter {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 49.99em) {
+  .hidemobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 50em) {
+  .hidedesktop {
+    display: none !important;
+  }
 }
