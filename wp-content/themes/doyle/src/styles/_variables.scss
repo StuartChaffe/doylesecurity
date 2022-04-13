@@ -6,16 +6,16 @@
 	--font-weight-normal: 400;
 	--font-weight-bold: 500;
 	--font-weight-heavy: 700;
-	--font-weight-heavy: var(--font-weight-bold);
 
 	--line-height: 1.5;
-	--line-height-headings: 1.2;
+	--line-height-headings: 1.1;
 
 	--color-grey-dark: #1D1D1D;
 	--color-grey: #F4F4F4;
 	--color-grey-light: #efefef;
 
 	--color-primary: #DB251C;
+	--color-primary-light: #E25149;
 	--color-secondary: #00AFAD;
 	--color-tertiary: #FFBC49;
 	--color-quaternary: #E2574C;
@@ -23,8 +23,8 @@
 	--color-text-base: #000;
 	--color-text-dark: #181822;
 	--color-text-reversed: #fff;
-	--color-text-link: #0087D0;
-	--color-text-hover: #003451;
+	--color-text-link: var(--color-primary);
+	--color-text-hover: var(--color-text-base);
 
 	--color-facebook: #3B5998;
 	--color-twitter: #1DA1F2;
@@ -51,8 +51,9 @@
 
 	--font-size: 1.05rem;
 	--font-size-lead: calc(1.2rem + 0.1vw);
-	--font-size-small: calc(0.8rem + 0.1vw);
+	--font-size-small: calc(0.7rem + 0.1vw);
 	--font-size-h1: 2.4rem;
+	--font-size-h1-small: 2.4rem;
 	--font-size-h2: 1.9rem;
 	--font-size-h3: 1.6rem;
 	--font-size-h4: 1.4rem;
@@ -61,6 +62,7 @@
 
 	@include mq(medium) {
 		--font-size-h1: calc(4rem + 1vw);
+		--font-size-h1-small: calc(3rem + 1vw);
 		--font-size-h2: calc(2.5rem + 0.2vw);
 		--font-size-h3: calc(2rem + 0.2vw);
 		--font-size-h4: calc(1.4rem + 0.2vw);
@@ -69,6 +71,7 @@
 
 	@include mq(large) {
 		--font-size-h1: calc(5rem + 1vw);
+		--font-size-h1-small: calc(3.5rem + 1vw);
 		--font-size-h2: calc(2.5rem + 0.2vw);
 		--font-size-h3: calc(1.6rem + 0.2vw);
 		--font-size-h4: calc(1.2rem + 0.2vw);

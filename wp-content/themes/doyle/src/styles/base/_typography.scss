@@ -38,7 +38,7 @@ blockquote {
 
 a {
 	color: var(--color-text-link);
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	margin-bottom: var(--spacing);
+	// margin-bottom: var(--spacing);
 	line-height: var(--line-height-headings);
 	font-weight: var(--font-weight-bold);
 	color: var(--heading-color);

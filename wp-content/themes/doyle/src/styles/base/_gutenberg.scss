@@ -30,8 +30,7 @@
 
 /* Main column width */
 .wp-block {
-    max-width: var(--content-width);
-
+	max-width: 100% !important;
 	/* Wide column width */
 	&[data-align="wide"],
 	&[data-align="full"] {

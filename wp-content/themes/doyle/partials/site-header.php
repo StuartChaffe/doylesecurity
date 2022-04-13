@@ -4,7 +4,7 @@
 		<button class="site-header__menu-btn" data-toggle="#mobile-menu" data-toggle-body-class="nav-open" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">Mobile Menu</button>
 
 		<div class="site-header__content">
-			<p>Need a Security Solution call 01226 298492</p>
+			<p>Need a Security Solution call <a href="tel:01226298492" class="btn btn-small">01226 298492</a></p>
 			<nav class="site-header__nav">
 				<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
 			</nav>

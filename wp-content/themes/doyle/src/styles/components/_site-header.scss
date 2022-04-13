@@ -20,6 +20,12 @@
 			text-transform: uppercase;
 			font-size: var(--font-size-small);
 			color: white;
+			margin-top: -0.5rem;
+		}
+		.btn {
+			font-size: var(--font-size-small);
+			font-weight: var(--font-weight-heavy);
+			margin-left: 0.5rem;
 		}
 	}
 }
@@ -58,6 +64,7 @@
 	line-height: 100%;
 	a {
 		color: white;
+		text-decoration: none;
 	}
 
 	.sub-menu {
