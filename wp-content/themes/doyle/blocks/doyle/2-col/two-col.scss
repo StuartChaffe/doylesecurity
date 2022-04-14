@@ -1,0 +1,23 @@
+.two-col {
+	@extend .container;
+	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: row;
+	}
+	&__item {
+		width: 100%;
+		@include mq(medium) {
+			width: 50%;
+		}
+		h2, h3, h4, h5 {
+			padding-right: 2rem;
+		}
+		&:first-of-type {
+			margin-bottom: 1.5rem;
+			@include mq(medium) {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

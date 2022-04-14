@@ -13,6 +13,12 @@
 	padding: 0 1em;
 	width: 100%;
 	max-width: var(--container);
+	@include mq(medium) {
+		padding: 0 4em;
+	}
+	@include mq(xlarge) {
+		padding: 0 1em;
+	}
 }
 
 .main {
@@ -28,5 +34,35 @@
 		h1, h2, h3, h4, h5, h6, p, ul li {
 			color: white;
 		}	
+	}
+}
+.bkg {
+	&--white {
+		background-color: white;
+	}
+	&--grey {
+		background-color: var(--color-grey);
+	}
+	&--black {
+		background-color: var(--color-grey-dark);
+		color: white;
+	}
+	&--grad {
+		background: rgb(0,0,0);
+		background: linear-gradient(90deg, var(--color-grey-dark) 0%, var(--color-primary) 100%);
+		color: white;
+	}
+}
+
+.section-pad {
+	padding-top: var(--spacing);
+	padding-bottom: var(--spacing);
+	@include mq(medium) {
+		padding-top: var(--spacing-l);
+		padding-bottom: var(--spacing-l);
+	}
+	@include mq(xlarge) {
+		padding-top: var(--spacing-xl);
+		padding-bottom: var(--spacing-xl);
 	}
 }

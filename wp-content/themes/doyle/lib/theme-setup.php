@@ -75,3 +75,49 @@ add_action('after_setup_theme', function() {
 	remove_filter('render_block', 'wp_restore_group_inner_container');
 	remove_filter('render_block', 'wp_render_layout_support_flag');
 });
+
+
+
+/**
+ * Editor formats
+ */
+function add_style_select_buttons( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+add_filter( 'mce_buttons_2', 'add_style_select_buttons' );
+function my_custom_styles( $init_array ) {  
+	$style_formats = array(  
+		array(  
+			'title' => 'Paragraph lead',  
+			'block' => 'p',  
+			'classes' => 'lead',
+			'wrapper' => false,
+		), 
+		array(  
+			'title' => 'Red button',  
+			'block' => 'span',  
+			'classes' => 'btn',
+			'wrapper' => false,
+		),  
+		array(  
+			'title' => 'White button',  
+			'block' => 'span',  
+			'classes' => 'btn btn--secondary',
+			'wrapper' => false,
+		), 
+		array(  
+			'title' => 'Border button',  
+			'block' => 'span',  
+			'classes' => 'btn btn--outline',
+			'wrapper' => false,
+		),  
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+
+	return $init_array;  
+
+	} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_custom_styles' );

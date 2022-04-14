@@ -1,7 +1,7 @@
-.btn, button {
+.btn {
 	display: inline-block;
 	border-radius: 60px;
-	padding: 0.4rem 2rem;
+	padding: 0.4rem 1.8rem;
 	border: none;
 	color: white;
 	background-color: var(--color-primary);
@@ -21,6 +21,16 @@
 		color: white;
 		background-color: var(--color-primary-light);
 	}
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	+ .btn {
+		margin-left: 0.5rem;
+	}
 }
 .btn-small {
 	padding: 0.2rem 1rem;
@@ -34,14 +44,26 @@
 		color: var(--color-primary);
 		background-color: rgba(255,255,255,0.8);
 	}
+	a {
+		color: var(--color-primary);
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
 }
 .btn--outline {
 	background-color: transparent;
 	color: white;
 	border: 1px solid white;
+	padding: calc(0.4rem - 2px) calc(1.8rem - 2px);
 
 	&:hover, &:focus {
 		color: white;
 		background-color: rgba(255,255,255,0.2);
 	}
+}
+
+p + p .btn {
+	margin-top: 1.5rem;
 }

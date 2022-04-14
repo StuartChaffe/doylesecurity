@@ -137,7 +137,7 @@ body:before {
   --body-background-color: #fff;
   --border-radius: 16px;
   --spacing-xxl: 200px;
-  --spacing-xl: 150px;
+  --spacing-xl: 120px;
   --spacing-l: 100px;
   --spacing: 50px;
   --spacing-s: 25px;
@@ -161,7 +161,7 @@ body:before {
   :root {
     --font-size-h1: calc(4rem + 1vw);
     --font-size-h1-small: calc(3rem + 1vw);
-    --font-size-h2: calc(2.5rem + 0.2vw);
+    --font-size-h2: calc(2.2rem + 0.2vw);
     --font-size-h3: calc(2rem + 0.2vw);
     --font-size-h4: calc(1.4rem + 0.2vw);
     --font-size-h5: calc(1.2rem + 0.2vw);
@@ -171,7 +171,7 @@ body:before {
   :root {
     --font-size-h1: calc(5rem + 1vw);
     --font-size-h1-small: calc(3.5rem + 1vw);
-    --font-size-h2: calc(2.5rem + 0.2vw);
+    --font-size-h2: calc(1.7rem + 1vw);
     --font-size-h3: calc(1.6rem + 0.2vw);
     --font-size-h4: calc(1.2rem + 0.2vw);
     --font-size-h5: calc(1rem + 0.2vw);
@@ -600,11 +600,21 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .banner__content, .site-footer__inner, .site-header__inner, .main {
+.container, .banner__content, .two-col, .site-footer__inner, .site-header__inner, .main {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
   max-width: var(--container);
+}
+@media (min-width: 50em) {
+  .container, .banner__content, .two-col, .site-footer__inner, .site-header__inner, .main {
+    padding: 0 4em;
+  }
+}
+@media (min-width: 80em) {
+  .container, .banner__content, .two-col, .site-footer__inner, .site-header__inner, .main {
+    padding: 0 1em;
+  }
 }
 
 .main {
@@ -616,6 +626,39 @@ div[data-type="core/button"] div[data-block] {
 
 .text--white h1, .text--white h2, .text--white h3, .text--white h4, .text--white h5, .text--white h6, .text--white p, .text--white ul li {
   color: white;
+}
+
+.bkg--white {
+  background-color: white;
+}
+.bkg--grey {
+  background-color: var(--color-grey);
+}
+.bkg--black {
+  background-color: var(--color-grey-dark);
+  color: white;
+}
+.bkg--grad {
+  background: black;
+  background: linear-gradient(90deg, var(--color-grey-dark) 0%, var(--color-primary) 100%);
+  color: white;
+}
+
+.section-pad {
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  .section-pad {
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+  }
+}
+@media (min-width: 80em) {
+  .section-pad {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
 }
 
 .content > * {
@@ -701,10 +744,10 @@ div[data-type="core/button"] div[data-block] {
   margin-right: 5px;
 }
 
-.btn, button {
+.btn {
   display: inline-block;
   border-radius: 60px;
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 1.8rem;
   border: none;
   color: white;
   background-color: var(--color-primary);
@@ -716,11 +759,21 @@ div[data-type="core/button"] div[data-block] {
   transition: all 0.1s ease-in-out;
   text-decoration: none;
 }
-.btn:hover, .btn:focus, button:hover, button:focus {
+.btn:hover, .btn:focus {
   outline: 0;
   text-decoration: none;
   color: white;
   background-color: var(--color-primary-light);
+}
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+.btn a:hover, .btn a:focus {
+  text-decoration: none;
+}
+.btn + .btn {
+  margin-left: 0.5rem;
 }
 
 .btn-small {
@@ -735,15 +788,27 @@ div[data-type="core/button"] div[data-block] {
   color: var(--color-primary);
   background-color: rgba(255, 255, 255, 0.8);
 }
+.btn--secondary a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.btn--secondary a:hover, .btn--secondary a:focus {
+  text-decoration: none;
+}
 
 .btn--outline {
   background-color: transparent;
   color: white;
   border: 1px solid white;
+  padding: calc(0.4rem - 2px) calc(1.8rem - 2px);
 }
 .btn--outline:hover, .btn--outline:focus {
   color: white;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+p + p .btn {
+  margin-top: 1.5rem;
 }
 
 .global-alert {
@@ -945,6 +1010,35 @@ body.nav-open {
 
 .social-links__link {
   color: white;
+}
+
+.two-col {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 50em) {
+  .two-col {
+    flex-direction: row;
+  }
+}
+.two-col__item {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .two-col__item {
+    width: 50%;
+  }
+}
+.two-col__item h2, .two-col__item h3, .two-col__item h4, .two-col__item h5 {
+  padding-right: 2rem;
+}
+.two-col__item:first-of-type {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 50em) {
+  .two-col__item:first-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .accordion {
