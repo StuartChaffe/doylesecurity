@@ -468,19 +468,19 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .quote, .link-list, .cta, .banner__content, .two-col, .main {
+.container, .quote, .link-list, .form-block, .cta, .banner__content, .two-col, .main {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
   max-width: var(--container);
 }
 @media (min-width: 50em) {
-  .container, .quote, .link-list, .cta, .banner__content, .two-col, .main {
+  .container, .quote, .link-list, .form-block, .cta, .banner__content, .two-col, .main {
     padding: 0 4em;
   }
 }
 @media (min-width: 80em) {
-  .container, .quote, .link-list, .cta, .banner__content, .two-col, .main {
+  .container, .quote, .link-list, .form-block, .cta, .banner__content, .two-col, .main {
     padding: 0 1em;
   }
 }
@@ -935,6 +935,63 @@ p + p .btn {
 @media (min-width: 50em) {
   .cta__content {
     padding: var(--spacing) var(--spacing-xxl);
+  }
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 50em) {
+  .form-block {
+    flex-direction: column;
+  }
+}
+.form-block__header {
+  padding: var(--spacing-s) var(--spacing-l);
+  background-color: var(--color-secondary);
+}
+.form-block__header-content {
+  position: relative;
+  color: white;
+}
+.form-block__header-content .btn, .form-block__header-content .btn--secondary {
+  margin-top: 0;
+  color: var(--color-secondary);
+}
+.form-block__header-content .btn a, .form-block__header-content .btn--secondary a {
+  color: var(--color-secondary);
+}
+.form-block__header-content:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: -1.5rem;
+  top: 8px;
+  background-color: white;
+}
+.form-block__body {
+  display: flex;
+  background: white;
+  padding: var(--spacing-l);
+}
+.form-block__body-content {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .form-block__body-content {
+    width: 50%;
+    padding-right: 2rem;
+  }
+}
+.form-block__body-form {
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .form-block__body-form {
+    width: 50%;
+    padding-left: 1rem;
   }
 }
 

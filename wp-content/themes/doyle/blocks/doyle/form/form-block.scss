@@ -1,0 +1,55 @@
+.form-outer {
+
+}
+.form-block {
+	@extend .container;
+	display: flex;
+	flex-direction: column;
+	@include mq(medium) {
+		flex-direction: column;
+	}
+
+	&__header {
+		padding: var(--spacing-s) var(--spacing-l);
+		background-color: var(--color-secondary);
+		&-content {
+			position: relative;
+			color: white;
+			.btn, .btn--secondary {
+				margin-top: 0;
+				a {
+					color: var(--color-secondary);
+				}
+				color: var(--color-secondary);
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				width: 4px;
+				height: 100%;
+				left: -1.5rem;
+				top: 8px;
+				background-color: white;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		background: white;
+		padding: var(--spacing-l);
+		&-content {
+			width: 100%;
+			@include mq(medium) {
+				width: 50%;
+				padding-right: 2rem;
+			}
+		}
+		&-form {
+			width: 100%;
+			@include mq(medium) {
+				width: 50%;
+				padding-left: 1rem;
+			}
+		}
+	}
+}
