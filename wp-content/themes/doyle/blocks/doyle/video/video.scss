@@ -6,7 +6,6 @@
 		align-items: center;
 		text-align: center;
 		padding: var(--spacing-s);
-		border-bottom: 10px solid var(--color-primary);
 		@include mq(medium) {
 			padding: var(--spacing);
 		}

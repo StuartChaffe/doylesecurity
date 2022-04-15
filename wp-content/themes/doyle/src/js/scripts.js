@@ -6,3 +6,4 @@ import './components/unsupported-browsers';
 import './components/toggle';
 import './components/accordion';
 import './components/menu';
+import './components/youtube-lazyload';

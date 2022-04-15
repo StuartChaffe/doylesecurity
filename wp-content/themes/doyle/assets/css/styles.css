@@ -1367,6 +1367,24 @@ body.nav-open {
   align-items: center;
   text-align: center;
   padding: var(--spacing-s);
+  border-bottom: 10px solid var(--color-primary);
+}
+@media (min-width: 50em) {
+  .quote__content {
+    padding: var(--spacing);
+  }
+}
+.quote__content img {
+  width: 40px;
+  margin-bottom: var(--spacing-s);
+}
+
+.quote__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-s);
 }
 @media (min-width: 50em) {
   .quote__content {
