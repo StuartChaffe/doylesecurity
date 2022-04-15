@@ -1,0 +1,10 @@
+.cta {
+	@extend .container;
+	&__content {
+		text-align: center;
+		padding: var(--spacing-s);
+		@include mq(medium) {
+			padding: var(--spacing) var(--spacing-xxl);
+		}
+	}
+}

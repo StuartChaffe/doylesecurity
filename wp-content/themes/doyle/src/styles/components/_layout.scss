@@ -66,3 +66,12 @@
 		padding-bottom: var(--spacing-xl);
 	}
 }
+.section-marg {
+	margin-bottom: var(--spacing);
+	@include mq(medium) {
+		margin-bottom: var(--spacing-l);
+	}
+	@include mq(xlarge) {
+		margin-bottom: var(--spacing-xl);
+	}
+}
