@@ -77,6 +77,11 @@ function doyle_allowed_block_types( $allowed_blocks ) {
 		'acf/custom-block-doyle-3',
 		'acf/custom-block-doyle-4',
 		'acf/custom-block-doyle-5',
+		'acf/custom-block-doyle-6',
+		'acf/custom-block-doyle-7',
+		'acf/custom-block-doyle-8',
+		'acf/custom-block-doyle-9',
+		'acf/custom-block-doyle-10',
 	);
  
 }

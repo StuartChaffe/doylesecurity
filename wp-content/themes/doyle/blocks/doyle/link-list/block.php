@@ -11,13 +11,13 @@ Allow Multiple: true
 
 ?>
 <section class="bkg--grey">
-	<div class="link-list section-pad">
+	<div class="link-list sp">
 	<?php if( have_rows('links') ) { ?>
 		<?php while( have_rows('links') ): the_row();
-			$icon = get_sub_field('link_icon');
-			$title = get_sub_field('link_title');
-			$content = get_sub_field('link_content');
-			$button = get_sub_field('link_link');
+			$icon 		= get_sub_field('link_icon');
+			$title 		= get_sub_field('link_title');
+			$content 	= get_sub_field('link_content');
+			$button 	= get_sub_field('link_link');
 		?>
 
 		<a class="link-list__item" href="<?php echo $button['url']; ?>">

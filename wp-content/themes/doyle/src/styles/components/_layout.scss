@@ -36,6 +36,8 @@
 		}	
 	}
 }
+
+// Background colours
 .bkg {
 	&--white {
 		background-color: white;
@@ -54,7 +56,14 @@
 	}
 }
 
-.section-pad {
+.txt {
+	&--red {
+		color: var(--color-primary);
+	}
+}
+
+// Section spacing
+.sp {
 	padding-top: var(--spacing);
 	padding-bottom: var(--spacing);
 	@include mq(medium) {
@@ -66,12 +75,33 @@
 		padding-bottom: var(--spacing-xl);
 	}
 }
-.section-marg {
+.sm {
+	margin-top: var(--spacing);
+	margin-bottom: var(--spacing);
+	@include mq(medium) {
+		margin-top: var(--spacing-l);
+		margin-bottom: var(--spacing-l);
+	}
+	@include mq(xlarge) {
+		margin-top: var(--spacing-xl);
+		margin-bottom: var(--spacing-xl);
+	}
+}
+.sm--bottom {
 	margin-bottom: var(--spacing);
 	@include mq(medium) {
 		margin-bottom: var(--spacing-l);
 	}
 	@include mq(xlarge) {
 		margin-bottom: var(--spacing-xl);
+	}
+}
+.sm--top {
+	margin-top: var(--spacing);
+	@include mq(medium) {
+		margin-top: var(--spacing-l);
+	}
+	@include mq(xlarge) {
+		margin-top: var(--spacing-xl);
 	}
 }

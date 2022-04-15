@@ -15,7 +15,6 @@ $content	= get_field('banner_content');
 $title 		= $content['title'];
 $size 		= $content['size'];
 $button 	= $content['button'];
-// $text 		= $content['content'];
 $text 		= str_replace(['<p>', '</p>'], '', $content['content']);
 $overlay 	= get_field('banner_overlay');
 ?>

@@ -16,7 +16,7 @@ $rightimage		= $content['right_content_image'];
 $bkg			= get_field('bkg_colour');
 ?>
 <section class="<?php echo $bkg; ?>">
-	<div class="two-col section-pad">
+	<div class="two-col sp">
 		<div class="two-col__item">
 			<?php if ($leftcontent) { ?><?php echo $leftcontent; ?><?php } ?>
 			<?php if ($leftimage) { ?><img loading="lazy" class="" src="<?php echo $leftimage['url']; ?>" alt="<?php echo $leftimage['alt']; ?>" /><?php } ?>

@@ -9,10 +9,10 @@
 		position: relative;
 		background-color: white;
 		border-radius: var(--border-radius);
-		width: calc(100% - 2rem);
+		width: 100%;
 		text-decoration: none;
 		color: var(--color-text-base);
-		margin: 0 1rem 1.5rem 1rem;
+		margin: 0 0rem 1.5rem 0;
 		transition: transform .1s ease-in-out;
 		@include mq(medium) {
 			width: calc(100% / 3);
@@ -50,6 +50,7 @@
 			}
 		}
 		&:last-of-type {
+			margin-bottom: 0;
 			@include mq(medium) {
 				margin-right: 0;
 			}

@@ -1,0 +1,18 @@
+.quote {
+	@extend .container;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: var(--spacing-s);
+		@include mq(medium) {
+			padding: var(--spacing);
+		}
+
+		img {
+			width: 40px;
+			margin-bottom: var(--spacing-s);
+		}
+	}
+}
