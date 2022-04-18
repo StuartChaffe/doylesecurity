@@ -1011,21 +1011,50 @@ p + p .btn {
 
 .site-footer {
   margin-top: auto;
-  text-align: center;
   background-color: #131313;
-  padding: var(--spacing);
+  padding-top: var(--spacing);
+  color: white;
+}
+.site-footer p, .site-footer li, .site-footer a {
+  color: white;
+  margin: 0;
+  font-size: var(--font-size-small);
+}
+.site-footer a {
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.site-footer ul {
+  padding: 0;
+  margin: 0;
+}
+.site-footer__item {
+  width: 50%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 50em) {
+  .site-footer__item {
+    width: 25%;
+    margin-bottom: 0;
+  }
+}
+.site-footer__item p:first-of-type {
+  margin-bottom: 1rem;
+}
+.site-footer__copy {
+  width: 100%;
+  border-top: 1px solid #979797;
+  text-align: left;
+  padding: 0.75rem 0;
+  margin-top: var(--spacing);
 }
 
 .site-footer__inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.site-footer p {
-  color: white;
-  margin: 0;
-  font-size: var(--font-size-small);
+  flex-wrap: wrap;
 }
 
 body.nav-open {
