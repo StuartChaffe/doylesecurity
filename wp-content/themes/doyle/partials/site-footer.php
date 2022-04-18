@@ -19,6 +19,9 @@
 			<?php if(get_field('youtube', 'options')): ?>
 				<li class="social-links__item"><a href="<?php the_field('youtube', 'options'); ?>" class="social-links__link"><?php echo get_icon('youtube'); ?></a></li>
 			<?php endif; ?>
+			<?php if(get_field('linkedin', 'options')): ?>
+				<li class="social-links__item"><a href="<?php the_field('linkedin', 'options'); ?>" class="social-links__link"><?php echo get_icon('linkedin'); ?></a></li>
+			<?php endif; ?>
 			</ul>
 		</div>
 		<div class="site-footer__item">

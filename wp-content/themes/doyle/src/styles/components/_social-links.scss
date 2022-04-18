@@ -1,12 +1,30 @@
 .social-links {
 	display: flex;
-	justify-content: center;
+	margin-top: 1rem !important;
 }
 
 .social-links__item {
-	margin: 0 1rem;
+	a {
+		color: #131313;
+	}
 }
 
 .social-links__link {
-	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.5rem !important;
+	background-color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	&:hover {
+		background-color: rgba(255,255,255,0.8);
+	}
+	.icon {
+		width: 18px;
+	}
+	.icon-facebook {
+		width: 25px;
+	}
 }
