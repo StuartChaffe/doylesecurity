@@ -1,7 +1,7 @@
 <?php
 
 add_action( 'init', 'cp_change_post_object' );
-// Change dashboard Posts to News
+// Change dashboard Posts to Newsmedia-text
 function cp_change_post_object() {
     $get_post_type = get_post_type_object('post');
     $labels = $get_post_type->labels;

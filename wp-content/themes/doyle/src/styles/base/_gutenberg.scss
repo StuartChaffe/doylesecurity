@@ -60,3 +60,8 @@ div[data-type="core/button"] div[data-block] {
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
 	max-width: 100%;
 }
+.wp-block-post-title,
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .heading-1  {
+	font-size: 2rem;
+}
