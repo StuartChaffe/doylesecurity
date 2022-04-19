@@ -10,8 +10,11 @@
 	}
 
 	&__header {
-		padding: var(--spacing-s) var(--spacing-l);
+		padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s);
 		background-color: var(--color-secondary);
+		@include mq(medium) {
+			padding: var(--spacing-s) var(--spacing-l);
+		}
 		&-content {
 			position: relative;
 			color: white;
@@ -26,7 +29,7 @@
 				content: '';
 				position: absolute;
 				width: 4px;
-				height: 100%;
+				height: calc(100% - 8px);
 				left: -1.5rem;
 				top: 8px;
 				background-color: white;
@@ -35,8 +38,13 @@
 	}
 	&__body {
 		display: flex;
+		flex-direction: column;
 		background: white;
-		padding: var(--spacing-l);
+		padding: var(--spacing-xs);
+		@include mq(medium) {
+			flex-direction: row;
+			padding: var(--spacing-l);
+		}
 		&-content {
 			width: 100%;
 			@include mq(medium) {

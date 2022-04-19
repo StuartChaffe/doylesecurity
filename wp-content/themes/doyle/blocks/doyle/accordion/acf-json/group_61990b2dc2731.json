@@ -3,6 +3,25 @@
     "title": "Accordion",
     "fields": [
         {
+            "key": "field_625e7b16455e3",
+            "label": "Title",
+            "name": "accordion_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_61990b2dc3e94",
             "label": "Accordion Items",
             "name": "accordion_items",
@@ -18,8 +37,8 @@
             "collapsed": "",
             "min": 1,
             "max": 0,
-            "layout": "row",
-            "button_label": "Add an accordion",
+            "layout": "block",
+            "button_label": "Add line",
             "sub_fields": [
                 {
                     "key": "field_61990b2dc473b",
@@ -55,8 +74,8 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
+                    "toolbar": "basic",
+                    "media_upload": 0,
                     "delay": 0
                 }
             ]
@@ -80,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649693428
+    "modified": 1650359079
 }
