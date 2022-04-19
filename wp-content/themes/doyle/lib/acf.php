@@ -15,6 +15,11 @@ add_action('acf/init', function () {
             'menu_title'  => __('Social'),
             'parent_slug' => $parent['menu_slug'],
         ));
+        $company = acf_add_options_page(array(
+            'page_title'  => __('Company Settings'),
+            'menu_title'  => __('Company Settings'),
+            'parent_slug' => $parent['menu_slug'],
+        ));
     }
 });
 

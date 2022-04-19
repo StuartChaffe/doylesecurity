@@ -3,8 +3,10 @@
 		<div class="site-footer__item">
 			<p><strong>Contact</strong></p>
 
-			<p>T: 01226 298492</p>
-			<p>E: office@doylesecurity.co.uk</p>
+			<ul>
+				<li><p>T: <a href="tel:<?php the_field('company_telephone', 'options'); ?>"><?php the_field('company_telephone', 'options'); ?></a></p></li>
+				<li><p>E: <a href="mailto:<?php the_field('company_email', 'options'); ?>"><?php the_field('company_email', 'options'); ?></a></p></li>
+			</ul>
 
 			<ul class="social-links">
 			<?php if(get_field('twitter', 'options')): ?>
@@ -51,7 +53,7 @@
 			</ul>
 		</div>
 		<div class="site-footer__copy">
-			<p><?php echo date('Y'); ?> &copy; Copyright Doyle Security Ltd Company no. 7806296</p>
+			<p><?php echo date('Y'); ?> &copy; Copyright <?php the_field('footer_copy', 'options'); ?></p>
 		<div>
 	</div>
 </footer>

@@ -1,10 +1,11 @@
+
 <header class="site-header">
 	<div class="site-header__inner">
 		<h1 class="site-header__logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Doyle Security logo" /></a></h1>
 		<button class="site-header__menu-btn" data-toggle="#mobile-menu" data-toggle-body-class="nav-open" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">Mobile Menu</button>
 
 		<div class="site-header__content">
-			<p>Need a Security Solution call <a href="tel:01226298492" class="btn btn-small">01226 298492</a></p>
+			<p><?php the_field('header_content', 'options', false, false); ?><a href="tel:<?php the_field('company_telephone', 'options'); ?>" class="btn btn-small"><?php the_field('company_telephone', 'options'); ?></a></p>
 			<nav class="site-header__nav">
 				<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
 			</nav>

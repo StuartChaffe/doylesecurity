@@ -73,7 +73,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "Get in touch to find out how we can help with your security requirements",
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
@@ -100,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650033117
+    "modified": 1650357279
 }
