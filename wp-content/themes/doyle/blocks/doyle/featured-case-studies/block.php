@@ -19,7 +19,7 @@ $featuredcasestudy = get_field( 'select_casestudies' );
 	<?php } ?>
 
 	<?php if( $featuredcasestudy ): ?>	
-		<div class="case-studie-list featured-case-studie-list">
+		<div class="case-studies-list featured-case-studies-list">
 		<?php foreach( $featuredcasestudy as $featured ):
 			$title = get_the_title($featured);
 			$banner = get_field('banner_image', $featured);

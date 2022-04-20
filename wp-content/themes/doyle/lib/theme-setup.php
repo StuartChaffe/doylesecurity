@@ -143,3 +143,6 @@ function pk_remove_comments_admin_bar() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('comments');
 }
+
+// Add excert to pages
+add_post_type_support( 'page', 'excerpt' );

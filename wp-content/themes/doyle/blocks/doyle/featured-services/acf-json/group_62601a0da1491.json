@@ -1,9 +1,9 @@
 {
-    "key": "group_625ffbe1757b0",
-    "title": "Featured services",
+    "key": "group_62601a0da1491",
+    "title": "Featured services (copy)",
     "fields": [
         {
-            "key": "field_625ffbe91a8c8",
+            "key": "field_62601a0dafa46",
             "label": "Content",
             "name": "featured_content",
             "type": "wysiwyg",
@@ -22,7 +22,7 @@
             "delay": 0
         },
         {
-            "key": "field_6260124199c77",
+            "key": "field_62601a0dafa5d",
             "label": "Services",
             "name": "services",
             "type": "repeater",
@@ -41,7 +41,7 @@
             "button_label": "Add service list",
             "sub_fields": [
                 {
-                    "key": "field_6260126699c78",
+                    "key": "field_62601a0db3b0b",
                     "label": "Title",
                     "name": "featured_title",
                     "type": "text",
@@ -60,7 +60,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_6260128599c79",
+                    "key": "field_62601a0db3b24",
                     "label": "Select services",
                     "name": "select_services",
                     "type": "post_object",
@@ -82,7 +82,7 @@
                     "ui": 1
                 },
                 {
-                    "key": "field_6260129799c7a",
+                    "key": "field_62601a0db3b2d",
                     "label": "Button",
                     "name": "featured_button",
                     "type": "link",
@@ -117,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650463589
+    "modified": 1650465293
 }
