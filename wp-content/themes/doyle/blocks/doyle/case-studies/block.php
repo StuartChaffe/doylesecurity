@@ -1,10 +1,10 @@
 <?php
 /*
 Active: true
-UUID: 9
-Title: News
-Description: Displays all news
-Keywords: news, blog
+UUID: 14
+Title: Case studies
+Description: Displays all case studies
+Keywords: case study, work
 Post Types: null
 Allow Multiple: true
 */
