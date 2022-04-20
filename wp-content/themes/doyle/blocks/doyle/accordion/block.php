@@ -15,7 +15,7 @@ $accordion = get_field('accordion_items');
 
 if($accordion) {
 ?>
-<section class="accordion sp">
+<section class="accordion sp bkg--white">
 	<?php if ($title) { ?>
 		<h2><?php echo $title; ?></h2>
 	<?php } ?>

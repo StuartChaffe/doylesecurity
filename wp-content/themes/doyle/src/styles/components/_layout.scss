@@ -41,6 +41,10 @@
 .bkg {
 	&--white {
 		background-color: white;
+		+  .bkg--white {
+			margin-top: 0;
+			padding-top: 0;
+		}
 	}
 	&--grey {
 		background-color: var(--color-grey);

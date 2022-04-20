@@ -11,7 +11,7 @@ Allow Multiple: true
 $bkg        = get_field('bkg_colour');
 $content	= get_field('cta_content');
 ?>
-<section class="cta sm--bottom">
+<section class="cta sm bkg--white">
     <div class="cta__content <?php echo $bkg; ?>">
         <?php echo $content['text']; ?>
         <?php if ($content['link']) { ?>

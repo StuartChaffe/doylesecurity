@@ -8,16 +8,16 @@ Keywords: news, blog
 Post Types: null
 Allow Multiple: true
 */
-$title      = get_field('news_title');
+$title      = get_field('casestudy_title');
 ?>
-<section class="news sp bkg--white">
+<section class="case-studies sp bkg--white">
 	<?php if ($title) { ?>
 		<h2><?php echo $title ?></h2>
 	<?php } ?>
 
 	<?php
 		$posts = new WP_Query( array(
-			'post_type' => 'post',
+			'post_type' => 'case-study',
 			'posts_per_page' => -1,
 			'orderby' => 'date',
 			'order' => 'DESC',
