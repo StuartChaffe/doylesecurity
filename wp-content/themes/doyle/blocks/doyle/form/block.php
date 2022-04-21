@@ -14,8 +14,9 @@ $content_above		= $content['above'];
 $content_alongside	= $content['alongside'];
 $default_header		= get_field('form_header_content', 'options');
 $default_body		= get_field('form_body_content', 'options');
+$default_bkg		= get_field('form_background', 'options');
 ?>
-<section class="form-outer sp bkg--grey" <?php if ($bkg) { ?>style="background-image: url('<?php echo $bkg['url']; ?>')"<?php } ?>>
+<section class="form-outer sp bkg--grey" style="background-image: url('<?php if ($bkg) { ?><?php echo $bkg['url']; ?><?php } else { ?><?php echo $default_bkg['url']; ?><?php } ?>')">
 	<div class="form-block">
 		<div class="form-block__header">
 			<div class="form-block__header-content">

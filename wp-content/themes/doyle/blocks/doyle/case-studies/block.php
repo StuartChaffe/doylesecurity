@@ -24,10 +24,21 @@ $title      = get_field('casestudy_title');
 		));
 	?>
 	<?php if ($posts->have_posts()) { ?>
-		<div class="news-list">
+		<div class="case-studies-list">
 		<?php while($posts->have_posts()) : $posts->the_post(); ?>
-			<a class="news-list__item" href="<?php esc_url( the_permalink() ); ?>" title="Article: <?php the_title(); ?>">
-				<?php echo get_icon('news'); ?><?php the_title(); ?>
+			<a href="<?php esc_url(the_permalink() ); ?>" class="case-studies-list__item">
+				<?php if( get_the_post_thumbnail() ) { ?>	
+					<?php echo get_the_post_thumbnail(); ?>
+				<?php } else { ?>
+					<img src="<?php echo get_template_directory_uri(); ?>/src/images/casestudy-default.png" alt="Case study default image" />
+				<?php } ?>
+
+				<div class="case-studies-list__content">
+					<h3><?php the_title(); ?></h3>
+					<?php the_excerpt(); ?>
+
+					<span class="link">Read more</span>
+				</div>
 			</a>
 		<?php endwhile; wp_reset_query(); ?>
 		</div>

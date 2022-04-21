@@ -13,7 +13,8 @@
 	}
 	&-list {
 		display: flex;
-		margin-bottom: 2rem;
+		flex-wrap: wrap;
+		// margin-bottom: 2rem;
 		flex-direction: column;
         @include mq(medium) {
             flex-direction: row;
@@ -28,15 +29,16 @@
 			text-decoration: none;
 			margin: 0 0 1rem 0;
 			@include mq(medium) {
-				width: calc(100% /  3);
-				margin: 0 0.75rem;
+				width: calc(100% /  3 - 1rem);
+				margin: 0 0.75rem 1.5rem 0.75rem;
 			}
-			&:first-of-type {
+			&:nth-child(3n+1) {
 				@include mq(medium) {
 					margin-left: 0;
 				}
 			}
-			&:last-of-type {
+			&:last-of-type,
+			&:nth-child(3n+3) {
 				@include mq(medium) {
 					margin-right: 0;
 				}
@@ -71,7 +73,7 @@
 		&__button {
 			width: 100%;
 			text-align: center;
-			margin: var(--spacing-s) 0;
+			margin: var(--spacing-xs) 0 var(--spacing) 0;
 		}
 		&__content {
 			height: 100%;

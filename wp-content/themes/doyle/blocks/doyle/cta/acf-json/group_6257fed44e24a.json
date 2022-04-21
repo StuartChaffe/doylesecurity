@@ -21,7 +21,7 @@
                 "bkg--black": "Black",
                 "bkg--grad": "Gradient"
             },
-            "default_value": "White",
+            "default_value": "bkg--grad",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -99,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650013025
+    "modified": 1650545855
 }
