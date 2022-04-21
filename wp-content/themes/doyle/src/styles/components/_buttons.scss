@@ -70,3 +70,9 @@
 p + p .btn {
 	margin-top: 1.5rem;
 }
+.link {
+	text-decoration: underline;
+	&:hover {
+		color: var(--color-primary);
+	}
+}

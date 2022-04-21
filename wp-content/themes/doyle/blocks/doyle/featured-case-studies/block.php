@@ -12,26 +12,35 @@ $title = get_field('featured_casestudy_title');
 $featuredcasestudy = get_field( 'select_casestudies' );
 ?>
 
+<section class="bkg--grey bkg--casestudy">
+	<div class="featured-case-studies sp">
+		<?php if ( $title ) { ?>
+		<h2><?php echo $title; ?></h2>
+		<?php } ?>
 
-<section class="featured-case-studies sp bkg--white">
-	<?php if ( $title ) { ?>
-	<h2><?php echo $title; ?></h2>
-	<?php } ?>
+		<?php if( $featuredcasestudy ) { ?>	
+			<div class="featured-case-studies-list">
+			<?php foreach( $featuredcasestudy as $featured ):
+				$image = get_the_post_thumbnail($featured);
+				$casestudytitle = get_the_title($featured);
+				$excerpt = get_the_excerpt($featured);
+			?>
+				<a href="<?php esc_url(the_permalink($featured) ); ?>" class="featured-case-studies-list__item">
+					<?php if( get_the_post_thumbnail($featured) ) { ?>	
+						<?php echo get_the_post_thumbnail($featured); ?>
+					<?php } else { ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/src/images/casestudy-default.png" alt="Case study default image" />
+					<?php } ?>
 
-	<?php if( $featuredcasestudy ): ?>	
-		<div class="case-studies-list featured-case-studies-list">
-		<?php foreach( $featuredcasestudy as $featured ):
-			$title = get_the_title($featured);
-			$banner = get_field('banner_image', $featured);
-			$image = get_field('square_image', $featured);
-			$name = get_field('story_name', $featured);
-		?>
+					<div class="featured-case-studies-list__content">
+						<h3><?php echo $casestudytitle; ?></h3>
+						<?php echo $excerpt; ?>	
 
-		<a class="news-list__item" href="<?php esc_url(the_permalink($featured) ); ?>">
-			<?php echo get_icon('news'); ?><?php echo($title); ?>
-		</a>
-	
-		<?php endforeach; ?>
-		</div>
-	<?php endif; ?>
+						<span class="link">Read more</span>
+					</div>
+				</a>
+			<?php endforeach; ?>
+			</div>
+		<?php } ?>
+	</div>
 </section>
