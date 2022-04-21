@@ -63,7 +63,7 @@
             "key": "field_626156d5b8616",
             "label": "Feature?",
             "name": "member_feature",
-            "type": "checkbox",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,15 +72,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "member__featured": "Feature?"
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "horizontal",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -115,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1650549556
+    "modified": 1650553484
 }
