@@ -27,4 +27,10 @@
 			}
 		}
 	}
+	&__video {
+		@extend .container;
+		margin-top: var(--spacing-s);
+		height: 50vw;
+		max-height: calc(var(--container) / 2);
+	}
 }

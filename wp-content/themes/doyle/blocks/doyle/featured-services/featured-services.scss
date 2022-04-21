@@ -2,12 +2,18 @@
 	@extend .container;
 	// display: flex;
 	// flex-direction: column;
+	&__intro {
+		@extend .container-s;
+		text-align: center;
+		margin-bottom: var(--spacing);
+	}
 	&__title {
 		padding-bottom: 1rem;
 		border-bottom: 2px solid var(--color-primary);
 	}
 	&-list {
 		display: flex;
+		margin-bottom: 2rem;
 
 		&__item {
 			position: relative;
@@ -17,7 +23,7 @@
 			color: white;
 			text-decoration: none;
 			@include mq(medium) {
-				width: calc(100% / 3);
+				width: calc(100% /  3);
 				margin: 0 0.75rem;
 			}
 			&:first-of-type {
@@ -57,6 +63,11 @@
 				z-index: 1;
 			}
 		}
+		&__button {
+			width: 100%;
+			text-align: center;
+			margin: var(--spacing-s) 0;
+		}
 		&__content {
 			height: 100%;
 			position: relative;
@@ -64,7 +75,8 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			padding: var(--spacing-xs);
+			font-weight: var(--font-weight-light);
+			padding: var(--spacing-xs) var(--spacing-xs) var(--spacing) var(--spacing-xs);
 		}
 	}
 }

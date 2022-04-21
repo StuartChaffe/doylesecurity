@@ -128,8 +128,8 @@ body:before {
   --color-text-base: #000;
   --color-text-dark: #181822;
   --color-text-reversed: #fff;
-  --color-text-link: var(--color-primary);
-  --color-text-hover: var(--color-text-base);
+  --color-text-link: var(--color-text-base);
+  --color-text-hover: var(--color-primary);
   --color-facebook: #3B5998;
   --color-twitter: #1DA1F2;
   --color-instagram: #262626;
@@ -144,6 +144,7 @@ body:before {
   --spacing-s: 50px;
   --spacing-xs: 25px;
   --spacing-base: 1rem;
+  --container-s: 800px;
   --container: 1200px;
   --container-l: 1430px;
   --content-width: var(--container);
@@ -475,21 +476,31 @@ div[data-type="core/button"] div[data-block] {
   min-height: 100%;
 }
 
-.container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col, .main {
+.container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col__video, .two-col, .main,
+.container-s,
+.featured-services__intro {
   margin: 0 auto;
   padding: 0 1em;
   width: 100%;
   max-width: var(--container);
 }
 @media (min-width: 50em) {
-  .container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col, .main {
+  .container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col__video, .two-col, .main,
+.container-s,
+.featured-services__intro {
     padding: 0 4em;
   }
 }
 @media (min-width: 80em) {
-  .container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col, .main {
+  .container, .quote, .news, .link-list, .form-block, .featured-services, .featured-news, .cta, .banner__content, .accordion, .two-col__video, .two-col, .main,
+.container-s,
+.featured-services__intro {
     padding: 0 1em;
   }
+}
+
+.container-s, .featured-services__intro {
+  max-width: var(--container-s);
 }
 
 .main {
@@ -522,6 +533,18 @@ div[data-type="core/button"] div[data-block] {
   background: linear-gradient(90deg, var(--color-grey-dark) 0%, var(--color-primary) 100%);
   color: white;
 }
+.bkg--services {
+  background-position: calc(100% + 20px) -60px;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-image: url("../../src/icons/services.svg");
+}
+.bkg--casestudy {
+  background-position: calc(100% + 20px) -20px;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-image: url("../../src/icons/casestudy.svg");
+}
 
 .txt--red {
   color: var(--color-primary);
@@ -540,6 +563,20 @@ div[data-type="core/button"] div[data-block] {
 @media (min-width: 80em) {
   .sp {
     padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+}
+
+.sp--bottom {
+  padding-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  .sp--bottom {
+    padding-bottom: var(--spacing-l);
+  }
+}
+@media (min-width: 80em) {
+  .sp--bottom {
     padding-bottom: var(--spacing-xl);
   }
 }
@@ -778,6 +815,11 @@ p + p .btn {
     padding-right: 0;
   }
 }
+.two-col__video {
+  margin-top: var(--spacing-s);
+  height: 50vw;
+  max-height: calc(var(--container) / 2);
+}
 
 .accordion h2 {
   margin-bottom: 3rem;
@@ -971,12 +1013,17 @@ p + p .btn {
   margin-left: var(--spacing-l);
 }
 
+.featured-services__intro {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
 .featured-services__title {
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--color-primary);
 }
 .featured-services-list {
   display: flex;
+  margin-bottom: 2rem;
 }
 .featured-services-list__item {
   position: relative;
@@ -1028,6 +1075,11 @@ p + p .btn {
 .featured-services-list__item img {
   z-index: 1;
 }
+.featured-services-list__button {
+  width: 100%;
+  text-align: center;
+  margin: var(--spacing-s) 0;
+}
 .featured-services-list__content {
   height: 100%;
   position: relative;
@@ -1035,7 +1087,8 @@ p + p .btn {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: var(--spacing-xs);
+  font-weight: var(--font-weight-light);
+  padding: var(--spacing-xs) var(--spacing-xs) var(--spacing) var(--spacing-xs);
 }
 
 .form-block {
@@ -1147,6 +1200,7 @@ p + p .btn {
 .link-list__item:hover {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  color: var(--color-text-base);
 }
 .link-list__item:hover h3 {
   text-decoration: underline;

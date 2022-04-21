@@ -213,6 +213,25 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_6261181fd1227",
+            "label": "Video",
+            "name": "twocol_video",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -233,5 +252,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649933275
+    "modified": 1650532940
 }

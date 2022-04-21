@@ -10,10 +10,12 @@ Allow Multiple: true
 */
 $content 	= get_field('featured_content');
 ?>
-<section class="bkg--black">
+<section class="bkg--black bkg--services">
 	<div class="featured-services sp">
 	<?php if ( $content ) { ?>
-		<?php echo $content; ?>
+		<div class="featured-services__intro">
+			<?php echo $content; ?>
+		</div>
 	<?php } ?>
 
 	<?php if( have_rows('services') ) { ?>
@@ -25,7 +27,7 @@ $content 	= get_field('featured_content');
 		<?php if ( $title ) { ?>
 			<h3 class="featured-services__title"><?php echo $title; ?></h3>
 		<?php } ?>
-			<?php if( $featuredservices ): ?>	
+			<?php if( $featuredservices ) { ?>	
 				<div class="featured-services-list">
 				<?php foreach( $featuredservices as $featured ):
 					$image = get_the_post_thumbnail($featured);
@@ -33,7 +35,12 @@ $content 	= get_field('featured_content');
 					$excerpt = get_the_excerpt($featured);
 				?>
 					<a href="<?php esc_url(the_permalink($featured) ); ?>" class="featured-services-list__item">
-						<?php echo get_the_post_thumbnail($featured); ?>
+						<?php if( get_the_post_thumbnail($featured) ) { ?>	
+							<?php echo get_the_post_thumbnail($featured); ?>
+						<?php } else { ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/src/images/service-default.png" alt="Security default image" />
+						<?php } ?>
+
 						<div class="featured-services-list__content">
 							<h3><?php echo $servicetitle; ?></h3>
 							<?php echo $excerpt; ?>	
@@ -41,10 +48,12 @@ $content 	= get_field('featured_content');
 					</a>
 				<?php endforeach; ?>
 				</div>
-			<?php endif; ?>
+			<?php } ?>
 
 		<?php if ( $button ) { ?>
-			<a class="btn btn--outline" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+			<div class="featured-services-list__button">
+				<a class="btn btn--outline" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+			</div>
 		<?php } ?>
 
 		<?php endwhile; ?>

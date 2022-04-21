@@ -24,8 +24,8 @@
 	--color-text-base: #000;
 	--color-text-dark: #181822;
 	--color-text-reversed: #fff;
-	--color-text-link: var(--color-primary);
-	--color-text-hover: var(--color-text-base);
+	--color-text-link: var(--color-text-base);
+	--color-text-hover: var(--color-primary);
 
 	--color-facebook: #3B5998;
 	--color-twitter: #1DA1F2;
@@ -45,7 +45,7 @@
 	--spacing-xs: 25px;
 	--spacing-base: 1rem;
 
-	//CHECK
+	--container-s: 800px;
 	--container: 1200px;
 	--container-l: 1430px;
 	--content-width: var(--container);
