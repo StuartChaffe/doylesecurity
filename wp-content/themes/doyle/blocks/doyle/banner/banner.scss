@@ -35,7 +35,8 @@
 		}
 	}
 	&--notext {
-		padding-top: 0;
+		padding-top: var(--spacing-xxl);
+		padding-bottom: var(--spacing-xxl);
 		align-items: center;
 	}
 

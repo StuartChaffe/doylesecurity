@@ -1333,7 +1333,8 @@ body.nav-open {
   }
 }
 .banner--notext {
-  padding-top: 0;
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
   align-items: center;
 }
 .banner__image {
