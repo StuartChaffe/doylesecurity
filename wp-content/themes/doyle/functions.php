@@ -19,7 +19,7 @@ require_once( 'lib/menus.php' );
 require_once( 'lib/acf.php' );
 
 // Vendor specific functions
-require_once( 'lib/vendors.php' );
+// require_once( 'lib/vendors.php' );
 
 // Helper functions
 require_once( 'lib/helpers.php' );

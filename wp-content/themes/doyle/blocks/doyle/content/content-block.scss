@@ -1,0 +1,6 @@
+.content-block {
+    @extend .container;
+    max-width: var(--container-s);
+    margin-right: auto;
+    margin-left: auto;
+}

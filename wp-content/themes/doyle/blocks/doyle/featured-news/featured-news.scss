@@ -4,6 +4,12 @@
 		margin-bottom: 2rem;
 	}
 }
+.related-news {
+	@extend .container;
+	h2 {
+		margin-bottom: 3rem;
+	}
+}
 .featured-news-list {
 	.news-list__item {
 		width: 100%;

@@ -26,8 +26,8 @@ $featurednews = get_field( 'select_news' );
 			$name = get_field('story_name', $featured);
 		?>
 
-		<a class="news-list__item" href="<?php esc_url(the_permalink($featured) ); ?>">
-			<?php echo get_icon('news'); ?><?php echo($title); ?>
+		<a class="news-list__item" href="<?php the_permalink($featured); ?>">
+			<?php echo get_icon('news'); ?><p><?php echo($title); ?></p>
 		</a>
 	
 		<?php endforeach; ?>

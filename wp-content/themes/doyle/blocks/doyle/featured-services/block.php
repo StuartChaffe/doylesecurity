@@ -34,12 +34,12 @@ $content 	= get_field('featured_content');
 					$servicetitle = get_the_title($featured);
 					$excerpt = get_the_excerpt($featured);
 				?>
-					<a href="<?php esc_url(the_permalink($featured) ); ?>" class="featured-services-list__item">
-						<?php if( get_the_post_thumbnail($featured) ) { ?>	
-							<?php echo get_the_post_thumbnail($featured); ?>
-						<?php } else { ?>
-							<img src="<?php echo get_template_directory_uri(); ?>/src/images/service-default.png" alt="Security default image" />
-						<?php } ?>
+					<a href="<?php the_permalink($featured); ?>" class="featured-services-list__item">
+						<div class="featured-services-list__image" style="background-image: url('<?php echo get_the_post_thumbnail_url($featured); ?>');">
+							<?php if( get_the_post_thumbnail($featured) ) { ?>	
+								<?php echo get_the_post_thumbnail($featured); ?>
+							<?php } ?>
+						</div>
 
 						<div class="featured-services-list__content">
 							<h3><?php echo $servicetitle; ?></h3>

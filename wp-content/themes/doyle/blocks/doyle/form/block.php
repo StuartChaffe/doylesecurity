@@ -36,7 +36,7 @@ $default_bkg		= get_field('form_background', 'options');
 				<?php } ?>
 			</div>
 			<div class="form-block__body-form">
-				FORM
+				<?php echo do_shortcode('[gravityform id="1" title="false"]'); ?>
 			</div>
 		</div>
 	</div>

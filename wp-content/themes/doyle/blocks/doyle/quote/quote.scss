@@ -1,5 +1,8 @@
 .quote {
 	@extend .container;
+	@include mq($until: medium) {
+		padding: 0;
+	}
 	&__content {
 		display: flex;
 		flex-direction: column;

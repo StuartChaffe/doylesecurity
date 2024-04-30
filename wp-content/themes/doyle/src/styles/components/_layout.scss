@@ -69,7 +69,7 @@
 		background-image: url('../../src/icons/services.svg');
 	}
 	&--casestudy {
-		background-position: -20px -20px;
+		background-position: -20px calc(100% + 120px);
 		background-size: 45%;
 		background-repeat: no-repeat;
 		background-image: url('../../src/icons/casestudy.svg');
@@ -102,6 +102,15 @@
 	}
 	@include mq(xlarge) {
 		padding-bottom: var(--spacing-xl);
+	}
+}
+.sp--top {
+	padding-top: var(--spacing);
+	@include mq(medium) {
+		padding-top: var(--spacing-l);
+	}
+	@include mq(xlarge) {
+		padding-top: var(--spacing-xl);
 	}
 }
 .sm {

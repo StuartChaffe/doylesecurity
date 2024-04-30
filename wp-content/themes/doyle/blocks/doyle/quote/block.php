@@ -15,10 +15,10 @@ $company    = $quote['company'];
 
 ?>
 <section class="quote sm bkg--white">
-    <div class="quote__content bkg--black">
-        <img src="<?php echo get_template_directory_uri(); ?>/src/images/quote.svg" alt="Quote" />
-        <p class="heading-3"><strong><?php echo $content; ?></strong></p>
-        <p><strong><span class="txt--red"><?php echo $author; ?></span></strong><br />
-            <?php echo $company; ?></p>
-    </div>
+	<div class="quote__content bkg--black">
+		<img src="<?php echo get_template_directory_uri(); ?>/src/images/quote.svg" alt="Quote" />
+		<p class="heading-3"><strong><?php echo $content; ?></strong></p>
+		<p><strong><span class="txt--red"><?php echo $author; ?></span></strong><br />
+			<?php echo $company; ?></p>
+	</div>
 </section>

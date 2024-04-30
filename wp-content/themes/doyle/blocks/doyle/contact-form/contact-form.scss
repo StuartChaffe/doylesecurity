@@ -1,0 +1,36 @@
+.contact-form {
+	&__title {
+		width: 100%;
+		margin-bottom: var(--spacing);
+		@include mq(medium) {
+			width: 50%;
+		}
+	}
+
+	.social-links {
+		&__item {
+			a {
+				color: white;
+			}
+		}
+	}
+	.social-links__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0.5rem !important;
+		background-color: var(--color-text-base);
+		&:hover {
+			background-color: rgba(0,0,0,0.8);
+		}
+		.icon {
+			width: 24px;
+			height: 24px;
+			fill: white;
+		}
+		.icon-facebook {
+			width: 28px;
+			height: 28px;
+		}
+	}
+}

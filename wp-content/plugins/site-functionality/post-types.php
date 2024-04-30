@@ -38,7 +38,7 @@ function origin_cpts() {
 	    'capability_type'       => 'post',
 	    'hierarchical'          => true,
 	    'rewrite'               => array(
-	        'slug'                  => 'case-study',
+	        'slug'                  => 'case-studies',
 	        'with_front'            => '0'
 	    ),
 	    'query_var'             => true,
@@ -76,7 +76,7 @@ function origin_cpts() {
 	$single_name		= "Job";
 	$plural_name		= "Careers";
 	$icon				= "dashicons-groups";
-	$gutenberg_enabled	= false;
+	$gutenberg_enabled	= true;
 	
 	$post_type_options = array(
 	    'label'                 => $single_name,

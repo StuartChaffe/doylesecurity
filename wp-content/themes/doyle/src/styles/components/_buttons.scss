@@ -1,4 +1,7 @@
-.btn {
+.btn,
+input[type="button"],
+input[type="submit"],
+button {
 	display: inline-block;
 	border-radius: 60px;
 	padding: 0.4rem 1.8rem;
@@ -55,7 +58,8 @@
 		}
 	}
 }
-.btn--outline {
+.btn--outline,
+.gform_save_link {
 	background-color: transparent;
 	color: white;
 	border: 1px solid white;
@@ -66,7 +70,6 @@
 		background-color: rgba(255,255,255,0.2);
 	}
 }
-
 p + p .btn {
 	margin-top: 1.5rem;
 }

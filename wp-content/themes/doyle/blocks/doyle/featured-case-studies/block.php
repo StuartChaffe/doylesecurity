@@ -13,26 +13,28 @@ $featuredcasestudy = get_field( 'select_casestudies' );
 ?>
 
 <section class="bkg--grey bkg--casestudy">
-	<div class="featured-case-studies sp">
+	<div class="case-studies sp">
 		<?php if ( $title ) { ?>
 		<h2><?php echo $title; ?></h2>
 		<?php } ?>
 
 		<?php if( $featuredcasestudy ) { ?>	
-			<div class="featured-case-studies-list">
+			<div class="case-studies-list">
 			<?php foreach( $featuredcasestudy as $featured ):
 				$image = get_the_post_thumbnail($featured);
 				$casestudytitle = get_the_title($featured);
 				$excerpt = get_the_excerpt($featured);
 			?>
-				<a href="<?php esc_url(the_permalink($featured) ); ?>" class="featured-case-studies-list__item">
-					<?php if( get_the_post_thumbnail($featured) ) { ?>	
+				<a href="<?php the_permalink($featured); ?>" class="case-studies-list__item">
+					<div class="case-studies-list__image" style="background-image: url('<?php echo get_the_post_thumbnail_url($featured); ?>');">
+					<?php if( get_the_post_thumbnail($featured) ) { ?>
 						<?php echo get_the_post_thumbnail($featured); ?>
 					<?php } else { ?>
 						<img src="<?php echo get_template_directory_uri(); ?>/src/images/casestudy-default.png" alt="Case study default image" />
 					<?php } ?>
+					</div>
 
-					<div class="featured-case-studies-list__content">
+					<div class="case-studies-list__content">
 						<h3><?php echo $casestudytitle; ?></h3>
 						<?php echo $excerpt; ?>	
 

@@ -9,12 +9,27 @@ Post Types: null
 Allow Multiple: true
 */
 
-
+$video = get_field('video');
+$videos = get_field('videos');
 ?>
-<section class="video">
-    <div class="embed-responsive embed-responsive-16by9">
-        <div class="youtube embed-responsive-item" data-embed="3DpzkAgHxgk">
-            <div class="play-button">pls</div>
-        </div>
-    </div>
+<?php if ($video) { ?>
+<section>
+	<div class="video">
+		<?php echo $video; ?>
+	</div>
 </section>
+<?php } ?>
+
+<?php if( have_rows('videos') ) { ?>
+	<section>
+		<div class="video_list">
+			<?php while( have_rows('videos') ): the_row();
+				$video = get_sub_field('video');
+			?>
+			<div class="video_list__item">
+				<?php echo $video; ?>
+			</div>
+			<?php endwhile; ?>
+		</div>
+	</section>
+<?php } ?>

@@ -9,9 +9,9 @@ Post Types: null
 Allow Multiple: true
 */
 
-$counter = 0;
-$title = get_field('accordion_title');
-$accordion = get_field('accordion_items');
+$counter 	= 0;
+$title		= get_field('accordion_title');
+$accordion 	= get_field('accordion_items');
 
 if($accordion) {
 ?>

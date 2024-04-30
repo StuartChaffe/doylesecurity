@@ -1,0 +1,9 @@
+.images {
+	@extend .container;
+	&-slider {
+		// margin-bottom: var(--spacing);
+		img {
+			width: 100%;
+		}
+	}
+}

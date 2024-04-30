@@ -26,6 +26,7 @@ html:focus-within {
 
 html {
 	font-size: var(--font-size);
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */

@@ -1,0 +1,75 @@
+.careers {
+	@extend .container;
+	&__item {
+		position: relative;
+		width: 100%;
+		padding: var(--spacing-xs);
+		@include mq(medium) {
+			padding: var(--spacing-s);
+		}
+		&:nth-child(odd) {
+			background-color: var(--color-grey);
+		}
+		h3 {
+			width: 100%;
+			border-bottom: 2px solid var(--color-primary);
+			padding-bottom: 0.75rem;
+		}
+	}
+	&__content {
+		margin-bottom: 2rem;
+		@include mq(medium) {
+			width: 80%;
+		}
+		&-meta {
+			margin-bottom: 1rem;
+			&__item {
+				@extend .lead;
+				display: flex;
+				align-items: center;
+				font-weight: var(--font-weight-heavy);
+				div {
+					width: calc(100% - 40px);
+				}
+			}
+			.icon {
+				margin-right: 0.75rem;
+				width: 30px;
+				height: 40px;
+				margin-bottom: auto;
+			}
+		}
+		&-desc {
+			// padding-left: 2.5rem;
+		}
+	}
+	&__apply {
+		@include mq(medium) {
+			width: calc(100% / 3 * 2);
+		}
+		.gform_wrapper {
+			background-color: #F9F9F9;
+			padding: var(--spacing-xs);
+			margin-top: 2rem;
+			@include mq(medium) {
+				padding: var(--spacing-s) var(--spacing) var(--spacing) var(--spacing);
+			}
+			.gf_step_number {
+				display: none !important;
+			}
+
+			input[type="email"],
+			input[type="number"],
+			input[type="search"],
+			input[type="text"],
+			input[type="tel"],
+			input[type="url"],
+			input[type="password"],
+			textarea,
+			select {
+				border: 1px solid #CBCBCB;
+			}
+		}
+	}
+	
+}

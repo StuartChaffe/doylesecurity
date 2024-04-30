@@ -20,11 +20,13 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	border-radius: 0;
 	background: transparent;
 	cursor: pointer;
-	&:hover {
-		background-color: #F9F9F9;
+	&:hover, &:focus {
+		background-color: var(--color-grey);
 	}
+	
 }
 .accordion__handle.is-active {
 	.accordion__icon {
@@ -35,10 +37,13 @@
 
 .accordion__title {
 	margin: 0!important;
-	padding: 1rem var(--spacing-s);
+	padding: 1rem 4rem 1rem 20px;
 	color: var(--color-text-dark);
 	font-size: var(--font-size-h4);
 	flex: 1;
+	@include mq(medium) {
+		padding: 1rem calc(var(--spacing-s) + 2rem) 1rem var(--spacing-s);
+	}
 
 	.is-active & {
 		color: white;
@@ -48,51 +53,36 @@
 
 .accordion__icon {
     position: absolute;
-	right: var(--spacing-s);
+	right: 1rem;
     width: 32px;
 	height: 20px;
 	transform: translateY(5px) rotate(180deg);
 	// margin: 0 var(--spacing);
+	@include mq(medium) {
+		right: var(--spacing-s);
+	}
 
 	.icon {
+		color: var(--color-text-dark);
 		width: 32px;
 		height: 20px;
 	}
-
-    // &:before,
-    // &:after {
-    //     content: "";
-    //     position: absolute;
-    //     background: var(--color-text-base);
-    //     transition: transform 0.25s ease-out;
-    // }
-
-    // &:before {
-    //     top: 0;
-    //     left: 50%;
-    //     width: 2px;
-    //     height: 100%;
-    //     margin-left: -1px;
-    // }
-
-    // &:after {
-    //     top: 50%;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 2px;
-    //     margin-top: -1px;
-    // }
-
 	.is-active & {
         &:before { transform: rotate(90deg); }
         &:after { transform: rotate(180deg); }
+		.icon {
+			color: white;
+		}
     }
 }
 
 .accordion__body {
 	display: none;
-	padding: var(--spacing-xs) var(--spacing-s) var(--spacing-s) var(--spacing-s);
+	padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-s) var(--spacing-xs);
 	background-color: white;
+	@include mq(medium) {
+		padding: var(--spacing-xs) var(--spacing-s) var(--spacing-s) var(--spacing-s);
+	}
 
 	p:first-child {
 		margin-top: 0;

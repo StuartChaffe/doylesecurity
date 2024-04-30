@@ -5,12 +5,13 @@ UUID: 14
 Title: Case studies
 Description: Displays all case studies
 Keywords: case study, work
-Post Types: null
+Post Types: case-study
 Allow Multiple: true
 */
 $title      = get_field('casestudy_title');
 ?>
-<section class="case-studies sp bkg--white">
+<section class="sp bkg--grey bkg--casestudy">
+	<div class="case-studies">
 	<?php if ($title) { ?>
 		<h2><?php echo $title ?></h2>
 	<?php } ?>
@@ -26,12 +27,14 @@ $title      = get_field('casestudy_title');
 	<?php if ($posts->have_posts()) { ?>
 		<div class="case-studies-list">
 		<?php while($posts->have_posts()) : $posts->the_post(); ?>
-			<a href="<?php esc_url(the_permalink() ); ?>" class="case-studies-list__item">
+			<a href="<?php the_permalink(); ?>" class="case-studies-list__item">
+				<div class="case-studies-list__image" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');">
 				<?php if( get_the_post_thumbnail() ) { ?>	
 					<?php echo get_the_post_thumbnail(); ?>
 				<?php } else { ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/src/images/casestudy-default.png" alt="Case study default image" />
 				<?php } ?>
+				</div>
 
 				<div class="case-studies-list__content">
 					<h3><?php the_title(); ?></h3>
@@ -43,6 +46,5 @@ $title      = get_field('casestudy_title');
 		<?php endwhile; wp_reset_query(); ?>
 		</div>
 	<?php } ?>
-
-
+	</div>
 </section>

@@ -1,10 +1,20 @@
 .cta {
 	@extend .container;
+	@include mq($until: medium) {
+		padding: 0;
+		// margin-bottom: 0;
+	}
 	&__content {
 		text-align: center;
 		padding: var(--spacing-s);
-		@include mq(medium) {
+		@include mq(large) {
 			padding: var(--spacing) var(--spacing-xxl);
 		}
+	}
+}
+
+.cta.bkg--white + .bkg--white {
+	@include mq($until: medium) {
+		padding-top: var(--spacing-s);
 	}
 }

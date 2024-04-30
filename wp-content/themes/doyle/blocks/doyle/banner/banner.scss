@@ -3,11 +3,15 @@
 	position: relative;
 	background-size: cover;
 	background-position: center center;
+	background-color: var(--color-grey-dark);
 	display: flex;
 	padding-top: var(--spacing-xxl);
 	overflow: hidden;
 	@include mq($until: medium) {
 		background-image: none !important;
+	}
+	@media only screen and (min-device-width: 800px) and (max-device-width: 1024px) {
+		min-height: 100vh;
 	}
 
 	&__content {
@@ -16,8 +20,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		h1 {
+			margin-bottom: var(--spacing);
+			@include mq(xlarge) {
+				max-width: 80%;
+			}
+		}
 		&--small {
 			h1 {
+				margin-bottom: 0;
 				font-size:  var(--font-size-h1-small);
 			}
 		}
@@ -55,16 +66,51 @@
 		}
 	}
 
+
+	&--video {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 85vh;
+		background-size: cover;
+		background-position: center;
+		background: black;
+		@include mq(medium) {
+			height: 100%;
+			// transform: scale(1.1);
+		}
+		video {
+			min-width: 100%;
+			min-height: 100%;
+			max-width: none;
+			min-height: 85vh;
+			position: absolute !important;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@include mq($until: medium) {
+				// width: 100%;
+				// top: 35vh;
+			}
+		}
+	}
+
+
+
 	&::after {
 		content: '';
 		position: absolute;
-		width: 50%;
+		width: 100%;
 		height: 100%;
 		top: 0;
 		right: 0;
 		background: var(--color-primary);
-		background: linear-gradient(90deg, rgba(219,37,28,0) 0%, rgba(219,37,28,1) 100%);
-		opacity: .5;
+		background: linear-gradient(90deg, rgba(18,18,18,0.8) 50%, rgba(219,37,28,1) 100%);
+		opacity: .7;
 	}
 	&__overlay {
 		&::after {

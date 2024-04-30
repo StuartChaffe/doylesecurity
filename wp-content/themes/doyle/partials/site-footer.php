@@ -27,33 +27,62 @@
 			</ul>
 		</div>
 		<div class="site-footer__item">
-			<p><strong>Services</strong></p>
-			<ul>
-				<li><a href="">Manned Services</a></li>
-				<li><a href="">Electronic Security</a></li>
-			</ul>
+			<p><strong><?php the_field('services_title', 'options'); ?></strong></p>
+			<?php 
+				$urls = get_field('services_links', 'options');
+			?>
+			<?php if($urls) { ?>
+				<ul>
+					<?php foreach( $urls as $url ):
+						$title = get_the_title($url);
+					?>
+					<li>
+						<a href="<?php echo get_permalink($url); ?>"> <?php echo ( $title ); ?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php } ?>
 		</div>
 
 		<div class="site-footer__item">
-			<p><strong>Useful links</strong></p>
-			<ul>
-				<li><a href="">FAQ</a></li>
-				<li><a href="">Contact</a></li>
-				<li><a href="">Accreditations & Partners</a></li>
-				<li><a href="">Employee Login</a></li>
-			</ul>
+			<p><strong><?php the_field('useful_title', 'options'); ?></strong></p>
+			<?php 
+				$urls = get_field('useful_links', 'options');
+			?>
+			<?php if($urls) { ?>
+				<ul>
+					<?php foreach( $urls as $url ):
+						$title = get_the_title($url);
+					?>
+					<li>
+						<a href="<?php echo get_permalink($url); ?>"> <?php echo ( $title ); ?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php } ?>
 		</div>
 
 		<div class="site-footer__item">
-			<p><strong>Company</strong></p>
-			<ul>
-				<li><a href="">Complaints Policy</a></li>
-				<li><a href="">Privacy Policy</a></li>
-				<li><a href="">Cookie Policy</a></li>
-			</ul>
+			<p><strong><?php the_field('company_title', 'options'); ?></strong></p>
+			<?php 
+				$urls = get_field('company_links', 'options');
+			?>
+			<?php if($urls) { ?>
+				<ul>
+					<?php foreach( $urls as $url ):
+						$title = get_the_title($url);
+					?>
+					<li>
+						<a href="<?php echo get_permalink($url); ?>"> <?php echo ( $title ); ?></a>
+					</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php } ?>
 		</div>
 		<div class="site-footer__copy">
 			<p><?php echo date('Y'); ?> &copy; Copyright <?php the_field('footer_copy', 'options'); ?></p>
-		<div>
+
+			<p>Website by <a href="https://www.vividcreative.com/" target="_blank">Vivid</a></p>
+		</div>
 	</div>
 </footer>
