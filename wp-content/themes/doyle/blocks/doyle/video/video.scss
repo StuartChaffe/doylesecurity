@@ -17,13 +17,19 @@
 			width: 100%;
 			padding-bottom: 1rem;
 			
-			@include mq($until: medium) {
-				height: 50vw;
+			height: 50vw;
+			max-height: calc(var(--container) / 2);
+			iframe {
+				width: 100%;
+				height: 100%;
+			}
+			@include mq(medium) {
+				height: calc(var(--container) / 6);
 				max-height: calc(var(--container) / 2);
-				iframe {
-					width: 100%;
-					height: 100%;
-				}
+			}
+			@include mq(large) {
+				height: calc(var(--container) / 6);
+				max-height: calc(var(--container) / 3);
 			}
 			@include mq(medium) {
 				width: calc(100% / 2);
